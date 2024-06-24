@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    min-height: 80vh;
+    background-image: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, 0.2)), url('img/ocaso.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    user-select: none; /* Sirve para no seleccionar el texto desde el navegador */
+}
+
+.text-encabezado:hover{
+    border-top: 10px outset #ffffff93;
+    border-bottom: 10px outset #ffffff93;
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: black;
+    text-shadow: 1px 1px 10px white, -1px -1px 10px white, 1px -1px 10px white, -1px 1px 10px white;
+    transition: all .4s;
+}
+.text-encabezado:not(:hover){
+    transition: all .4s;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.863);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10px;
+}
+
+.logo {
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+}
+
+#toggle-slider {
+    display: none;
+}
+.header .slider-container{
+    border: 10px solid black;
+    border-radius: 25px;
+    box-shadow: 0 0 16px rgb(255, 255, 255);
+    position: relative; height: 70px; width: 70px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+#toggle-slider:checked ~ label .slider-container{
+    position: relative; height: 500px; width: 300px;
+    margin-right: 15px;
+}
+
+
+/* Fin - Cabeza */
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+
+ul {
+    text-align: left;
+}
+
+h1{
+    font-size: 35px;
+    flex-direction: column;
+    margin-top: 130px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 25px;
+    margin-bottom: 40px;
+}
+h3:hover {
+    border-bottom: 10px ridge #ffffff93;
+    border-radius: 100%;
+    transition: all .4s;
+}

@@ -1,0 +1,189 @@
+.header-S {
+    background-color: rgba(0, 0, 0, 0.863);
+    padding: 0 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 350px;
+    border-radius: 25px;
+    position: relative;
+}
+
+.S {
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    padding-left: 50px;
+}
+.header-S .navigation  {
+    position: relative;
+    top: initial;
+    left: initial;
+    right: initial;
+}
+
+.navigation ul {
+    list-style: none;
+}
+
+.header-S .navigation ul li {
+    float: left;
+    position: relative;
+    font-size: 18px;
+    color: #fff;
+    text-transform: capitalize;
+    padding-top: 10px;
+    padding-bottom: 3px;
+    display: block;
+    transition: all .2s;
+}
+
+.header-S .navigation ul li a {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    padding: 20px;
+    display: block;
+    transition: all .4s;
+}
+
+.header-S .navigation ul li a:hover {
+    background-color: #ee092c;
+    border-top: 5px solid #750717;
+    border-bottom: 5px solid #750717;
+}
+
+.header-S .navigation ul li ul {
+    position: absolute;
+    right: 0;
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.863);
+    display: none;
+}
+
+.header-S .navigation ul li ul li {
+    width: 100%;
+    text-align: center;
+}
+
+.header-S .navigation ul li ul li a {
+    font-size: 15px;
+    text-transform: capitalize;
+}
+
+.header-S .navigation ul li ul li ul {
+    position: absolute;
+    top: 0;
+    right: 300px;
+}
+
+
+
+.header-S .navigation ul li:hover>ul {
+    display: initial;
+}
+
+.header-S label,
+#toggle-S6,
+#toggle-S7,
+#toggle-S8,
+#toggle-S9,
+#toggle-S10,
+#toggle-S11 {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-icon-on {
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: 15px;
+    right: 30px;
+}
+.menu-icon-off {
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    display: none;
+}
+
+.header-S img:hover { /* Lo que va a pasar cuando el cursor SI esta encima */
+    transform: rotate(360deg);
+    transition: transform 0.7s ease;
+}
+.header-S img:not(:hover) { /* Lo que va a pasar cuando el cursor DEJA de estar encima */
+    transform: rotate(-360deg);
+    transition: transform 0.7s ease;
+}
+
+
+@media(max-width: 2950px) {
+    .content label {
+        display: initial;
+    }
+
+    .header-S {
+        padding: 20px 10px;
+        margin-bottom: 50px;
+        display: block;
+    }
+
+    .header-S .navigation {
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.863);
+        display: none;
+    }
+
+    .header-S .navigation ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .header-S .navigation ul li a {
+        padding: 8px 30px 8px 10%;
+    }
+
+    .header-S .navigation ul li ul {
+        position: relative;
+        width: 100%;
+        left: 0;
+    }
+
+    .header-S .navigation ul li ul li {
+        background-color: rgba(255, 255, 255, 0.20);
+        padding-bottom: 10px;
+    }
+
+    .header-S .navigation ul li ul li ul {
+        position: relative;
+        width: 100%;
+        left: 0;
+    }
+
+    .header-S .navigation ul li ul li span {
+        padding: 4px 10px;
+        font-size: 10px;
+    }
+
+    #toggle-S6:checked~.navigation,
+    #toggle-S7:checked~.navigation,
+    #toggle-S8:checked~.navigation,
+    #toggle-S9:checked~.navigation,
+    #toggle-S10:checked~.navigation,
+    #toggle-S11:checked~.navigation {
+        display: block;
+    }
+    
+    input:checked ~ label .menu-icon-on {
+        display: none;
+    }
+    input:checked ~ label .menu-icon-off {
+        display: inline;
+    }
+}
