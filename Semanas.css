@@ -90,7 +90,8 @@
 #toggle-S8,
 #toggle-S9,
 #toggle-S10,
-#toggle-S11 {
+#toggle-S11,
+#toggle-S12 {
     display: none;
     cursor: pointer;
 }
@@ -176,7 +177,8 @@
     #toggle-S8:checked~.navigation,
     #toggle-S9:checked~.navigation,
     #toggle-S10:checked~.navigation,
-    #toggle-S11:checked~.navigation {
+    #toggle-S11:checked~.navigation,
+    #toggle-S12:checked~.navigation {
         display: block;
     }
     
